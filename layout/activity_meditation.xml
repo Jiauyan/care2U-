@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01639A"
+    tools:context=".MeditationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_blue_background">
+
+        <LinearLayout
+            android:id="@+id/topbarMeditation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/meditation_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Meditation"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="25dp"
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/topbarMeditation"
+            android:src="@drawable/meditation_icon" />
+
+        <TextView
+            android:id="@+id/text_view_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="10:00"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_countdown"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/editprofilepicbutton"
+            android:backgroundTint="#00B0CB">
+
+            <ImageView
+                android:id="@+id/Btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/Btn_play_music"
+                android:background="@drawable/meditation_previous_icon"
+                android:backgroundTint="@color/blue"/>
+
+
+            <ImageView
+                android:id="@+id/Btn_play_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/meditation_circle_play_icon"
+                android:backgroundTint="@color/white" />
+
+            <ImageView
+                android:id="@+id/Btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/Btn_play_music"
+                android:background="@drawable/meditation_forward_step_icon"
+                android:backgroundTint="@color/blue"/>
+
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Btn_play_music"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/editprofilepicbutton"
+                android:id="@+id/button_start_pause"
+                android:layout_gravity="center_horizontal"
+                android:text="PRESS TO START"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_start_pause"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/editprofilepicbutton"
+                android:id="@+id/button_reset"
+                android:layout_gravity="center_horizontal"
+                android:text="RESET"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>
